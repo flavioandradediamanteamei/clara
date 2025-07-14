@@ -8,7 +8,6 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Amei Cosméticos" class="logo">
     <h1>Método Robô Clara</h1>
     <h2>Projeto Diamantes • Amei Cosméticos com Flávio Andrade</h2>
     <p class="impacto">“Oportunidade para transformar vidas — começando pela sua.”</p>
@@ -16,49 +15,52 @@
 
   <section id="video">
     <h3>Confira o vídeo explicativo:</h3>
-    <iframe src="https://www.youtube.com/embed/-nAA7R4fMus" title="Entenda o Projeto" frameborder="0" allowfullscreen></iframe>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/-nAA7R4fMus" title="Entenda o Projeto" frameborder="0" allowfullscreen></iframe>
+    </div>
   </section>
 
   <section id="opcoes">
     <h3>Quanto você está disposto(a) a investir?</h3>
-
-    <form id="formulario">
+    <form id="form">
       <div class="opcao">
-        <label><input type="radio" name="nivel" value="Iniciante"> Iniciante: R$ 200,00 – 500,00</label>
-        <p class="detalhe discreto">Uso pessoal ou revenda simples. Suporte via grupo. Ativação mensal R$ 20,00.</p>
+        <label><input type="radio" name="nivel" value="Iniciante" required> <strong>Iniciante:</strong> R$ 200,00 a R$ 500,00</label>
+        <p>Compra para uso ou revenda com suporte básico via grupo.</p>
       </div>
 
       <div class="opcao">
-        <label><input type="radio" name="nivel" value="Intermediário"> Intermediário: R$ 500,00 – 1.500,00</label>
-        <p class="detalhe discreto">Com acompanhamento de um líder para ganhos entre R$ 1.000,00 e R$ 3.000,00.</p>
+        <label><input type="radio" name="nivel" value="Intermediário"> <strong>Intermediário:</strong> R$ 500,00 a R$ 1.500,00</label>
+        <p>Acompanhamento de um líder com foco em renda extra.</p>
       </div>
 
       <div class="opcao">
-        <label><input type="radio" name="nivel" value="Avançado"> Avançado: R$ 1.500,00 – 3.000,00</label>
-        <p class="detalhe discreto">Treinamento para liderança e ganhos acima de R$ 3.000,00.</p>
+        <label><input type="radio" name="nivel" value="Avançado"> <strong>Avançado:</strong> R$ 1.500,00 a R$ 3.000,00</label>
+        <p>Treinamento para liderança e ganhos acima de R$ 3.000,00.</p>
       </div>
 
       <div class="opcao">
-        <label><input type="radio" name="nivel" value="Expert"> Expert: Acima de R$ 3.000,00</label>
-        <p class="detalhe discreto">Acesso direto ao Flávio. Rumo ao diamante e ganhos acima de R$ 9.125,00.</p>
+        <label><input type="radio" name="nivel" value="Expert"> <strong>Expert:</strong> Acima de R$ 3.000,00</label>
+        <p>Contato direto com Flávio e plano para qualificar Diamante.</p>
       </div>
 
-      <h3>Preencha seus dados:</h3>
-      <input name="nome" placeholder="Nome completo" required>
-      <input name="whatsapp" placeholder="WhatsApp (somente números)" required>
-      <input name="email" placeholder="E-mail" type="email" required>
-      <input name="cidade" placeholder="Cidade/Estado" required>
+      <section id="formulario">
+        <h3>Preencha seus dados:</h3>
+          <input name="nome" placeholder="Nome completo" required>
+          <input name="whatsapp" placeholder="WhatsApp (somente números)" required>
+          <input name="email" placeholder="E‑mail" type="email" required>
+          <input name="cidade" placeholder="Cidade/Estado" required>
 
-      <fieldset class="ganhos-fieldset">
-        <legend>Você já é líder?</legend>
-        <textarea name="experiencia" placeholder="Cite empresas e resultados"></textarea>
-        <legend>Já ganhou quanto em outras empresas?</legend>
-        <label><input type="checkbox" name="ganhos" value="1-3k"> R$ 1.000 – 3.000</label>
-        <label><input type="checkbox" name="ganhos" value="3-5k"> R$ 3.000 – 5.000</label>
-        <label><input type="checkbox" name="ganhos" value="10k+"> Acima de R$ 10.000</label>
-      </fieldset>
+          <fieldset>
+            <legend>Você já é líder?</legend>
+            <textarea name="experiencia" placeholder="Cite empresas e resultados"></textarea>
+            <p class="ganho-titulo">Já ganhou quanto?</p>
+            <label><input type="checkbox" name="ganho" value="1-3k"> R$ 1.000,00 – R$ 3.000,00</label>
+            <label><input type="checkbox" name="ganho" value="3-5k"> R$ 3.000,00 – R$ 5.000,00</label>
+            <label><input type="checkbox" name="ganho" value="10k+"> Acima de R$ 10.000,00</label>
+          </fieldset>
 
-      <button type="submit" class="cta">Quero fazer parte do movimento!</button>
+          <button type="submit" class="cta">Quero fazer parte do movimento!</button>
+      </section>
     </form>
   </section>
 
