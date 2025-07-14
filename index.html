@@ -1,11 +1,88 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Projeto Diamantes</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js"></script>
-  </body>
-</html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Método Robô Clara • Projeto Diamantes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Amei Cosméticos" class="logo">
+    <h1>Método Robô Clara</h1>
+    <h2>Projeto Diamantes • Amei Cosméticos com Flávio Andrade</h2>
+    <p class="impacto">“Oportunidade para transformar vidas — começando pela sua.”</p>
+  </header>
 
+  <section id="video">
+    <h3>Confira o vídeo explicativo:</h3>
+    <iframe
+      src="https://www.youtube.com/embed/SEU_VIDEO_ID"
+      title="Vídeo Robô Clara"
+      frameborder="0" allowfullscreen
+    ></iframe>
+  </section>
+
+  <section id="opcoes">
+    <h3>Quanto você está disposto(a) a investir?</h3>
+
+    <div class="opcao">
+      <h4>Iniciante: R$ 200 – 500</h4>
+      <button onclick="comprar(1)">COMPRAR PARA USO OU REVENDA</button>
+      <p class="detalhe discreto">
+        Direciona ao link de cadastro. Suporte via grupo e redes. A ativação mensal é de R$ 20,00.
+      </p>
+    </div>
+
+    <div class="opcao">
+      <h4>Intermediário: R$ 500 – 1 500</h4>
+      <button onclick="comprar(2)">VENDA COM ACOMPANHAMENTO</button>
+      <p class="detalhe discreto">
+        Direciona a um líder que dará treinamento para ganhos de R$ 1 000 a R$ 3 000.
+      </p>
+    </div>
+
+    <div class="opcao">
+      <h4>Avançado: R$ 1 500 – 3 000</h4>
+      <button onclick="comprar(3)">VENDEDOR PROFISSIONAL</button>
+      <p class="detalhe discreto">
+        Treinamento para ser líder de rede e ganhos acima de R$ 3 000 mensais.
+      </p>
+    </div>
+
+    <div class="opcao">
+      <h4>Expert: Acima de R$ 3 000</h4>
+      <button onclick="comprar(4)">LÍDER DE REDE / DIAMANTE</button>
+      <p class="detalhe discreto">
+        Acesso direto a Flávio para treinar líderes e alcançar até R$ 9 125 em menos de 90 dias.
+      </p>
+    </div>
+  </section>
+
+  <section id="formulario">
+    <h3>Preencha seus dados:</h3>
+    <form id="form">
+      <input name="nome" placeholder="Nome completo" required>
+      <input name="whatsapp" placeholder="WhatsApp (somente números)" required>
+      <input name="email" placeholder="E‑mail" type="email" required>
+      <input name="cidade" placeholder="Cidade/Estado" required>
+
+      <fieldset>
+        <legend>Você já é líder?</legend>
+        <textarea name="experiencia" placeholder="Cite empresas e resultados"></textarea>
+        <label><input type="checkbox" name="ganho" value="1-3k"> Já ganhei entre R$ 1 000–3 000</label>
+        <label><input type="checkbox" name="ganho" value="3-5k"> Já ganhei entre R$ 3 000–5 000</label>
+        <label><input type="checkbox" name="ganho" value="10k+"> Já ganhei acima de R$ 10 000</label>
+      </fieldset>
+
+      <button type="submit" class="cta">Quero fazer parte do movimento!</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Projeto Diamantes com o Robô Clara • Amei Cosméticos com Flávio Andrade</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
