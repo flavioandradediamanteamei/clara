@@ -1,9 +1,17 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: sans-serif;
   background: #fff;
   color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
 header {
@@ -14,127 +22,116 @@ header {
 header h1 {
   color: #ff6600;
   font-size: 2.2rem;
-  margin: 0.5rem 0;
+  margin-bottom: .5rem;
 }
 
 header h2 {
   color: #333;
-  font-size: 1rem;
-  margin: 0.3rem 0;
+  font-size: 1.1rem;
 }
 
 .impacto {
   font-style: italic;
-  margin: 1rem 0;
+  margin-top: 1rem;
 }
 
 #video {
   width: 100%;
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  padding: 0 1rem;
+  max-width: 640px;
+  margin: 2rem auto;
 }
 
 #video iframe {
   width: 100%;
-  height: 340px;
+  height: 360px;
   border: none;
 }
 
-#opcoes {
+#investimento {
   width: 100%;
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  padding: 0 1rem;
+  max-width: 640px;
+  margin-bottom: 2rem;
 }
 
-#opcoes h3 {
-  font-size: 1.2rem;
+#investimento h3 {
   margin-bottom: 1rem;
+  font-size: 1.3rem;
 }
 
-.opcao-radio {
-  background: #f9f9f9;
+.plano {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1rem;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.plano label {
   display: flex;
   align-items: flex-start;
-  gap: 0.7rem;
+  gap: 0.5rem;
+  cursor: pointer;
 }
 
-.opcao-radio input[type="radio"] {
-  margin-top: 0.3rem;
-  transform: scale(1.2);
+.plano input[type="radio"] {
+  margin-top: 3px;
 }
 
-.opcao-conteudo {
-  flex-grow: 1;
-}
-
-.opcao-titulo {
-  font-weight: bold;
+.plano strong {
   color: #ff6600;
-  margin-bottom: 0.3rem;
-  display: block;
 }
 
 #formulario {
   width: 100%;
-  max-width: 500px;
-  margin: 0 auto 2rem;
-  padding: 0 1rem;
+  max-width: 640px;
+  margin-bottom: 2rem;
 }
 
 #formulario h3 {
-  font-size: 1.2rem;
   margin-bottom: 1rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
+  font-size: 1.3rem;
 }
 
 form input,
 form textarea {
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  padding: .7rem;
+  margin-bottom: .8rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
 }
 
-form textarea {
-  resize: vertical;
-  min-height: 80px;
+form fieldset {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
 }
 
-fieldset {
-  border: none;
-  margin-bottom: 1rem;
-  padding: 0;
-}
-
-legend {
+form legend {
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
-.checkbox-group label {
+form label.checkbox {
   display: block;
-  margin-bottom: 0.5rem;
+  margin: .3rem 0;
 }
 
 button.cta {
   background: #000;
   color: #fff;
   border: none;
-  padding: 0.9rem;
+  padding: .9rem;
   font-size: 1.1rem;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
 }
 
 button.cta:hover {
@@ -144,7 +141,9 @@ button.cta:hover {
 footer {
   background: #000;
   color: #fff;
+  width: 100%;
+  padding: 1rem 0;
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+  font-size: .9rem;
+  margin-top: 3rem;
 }
