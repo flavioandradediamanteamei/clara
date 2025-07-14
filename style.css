@@ -4,19 +4,11 @@ body {
   font-family: sans-serif;
   background: #fff;
   color: #000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 header {
   text-align: center;
   padding: 2rem;
-}
-
-.logo {
-  max-width: 150px;
-  margin-bottom: 1rem;
 }
 
 header h1 {
@@ -38,120 +30,107 @@ header h2 {
 
 #video {
   width: 100%;
-  max-width: 600px;
-  text-align: center;
+  max-width: 700px;
+  margin: auto;
   margin-bottom: 2rem;
+  padding: 0 1rem;
+  text-align: center;
 }
 
 #video iframe {
   width: 100%;
-  height: 340px;
+  height: 360px;
   border: none;
+  border-radius: 8px;
 }
 
 #opcoes {
-  width: 90%;
-  max-width: 600px;
-  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.opcao-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .opcao {
   background: #f9f9f9;
   border: 1px solid #ddd;
-  padding: 1rem;
-  margin-bottom: 1rem;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  padding: 1rem;
 }
 
 .opcao label {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 500;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 
-.opcao:hover {
-  background: #f0f0f0;
-}
-
-.opcao input[type="radio"] {
-  accent-color: #ff6600;
-}
-
-.opcao h4 {
-  margin: 0 0 0.5rem;
+.opcao label strong {
   color: #ff6600;
 }
 
-.detalhe.discreto {
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 0.5rem;
-}
-
 #formulario {
-  width: 90%;
-  max-width: 500px;
-  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
 }
 
-#formulario form {
+form {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 
-#formulario input,
-#formulario textarea {
-  padding: 0.7rem;
-  margin-bottom: 0.8rem;
+input,
+textarea {
+  padding: 0.8rem;
+  font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-#formulario textarea {
-  resize: vertical;
-  min-height: 80px;
-}
-
-.ganhos-fieldset {
-  margin-top: 1rem;
+fieldset {
   border: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.ganhos-fieldset legend {
+legend {
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-.ganhos-fieldset label {
-  display: block;
-  margin-bottom: 0.3rem;
-}
-
-#formulario button.cta {
+button.cta {
   background: #000;
   color: #fff;
   border: none;
-  padding: 0.8rem;
+  padding: 1rem;
   font-size: 1.1rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
-#formulario button.cta:hover {
+button.cta:hover {
   background: #222;
 }
 
 footer {
   background: #000;
   color: #fff;
-  width: 100%;
-  padding: 1rem 0;
   text-align: center;
   font-size: 0.9rem;
+  padding: 1rem 0;
+  margin-top: 2rem;
 }
