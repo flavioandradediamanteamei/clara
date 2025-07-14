@@ -15,49 +15,56 @@
 
   <section id="video">
     <h3>Confira o vídeo explicativo:</h3>
-    <iframe src="https://www.youtube.com/embed/-nAA7R4fMus" title="Entenda o Projeto" allowfullscreen></iframe>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/-nAA7R4fMus" title="Entenda o Projeto" frameborder="0" allowfullscreen></iframe>
+    </div>
   </section>
 
   <section id="opcoes">
     <h3>Quanto você está disposto(a) a investir?</h3>
     <form id="form">
       <div class="opcao">
-        <label><input type="radio" name="nivel" value="Iniciante: R$ 200,00 a R$ 500,00" required> <strong>Iniciante:</strong> R$ 200,00 a R$ 500,00</label>
-        <p>Compra para uso ou revenda com suporte básico via grupo.</p>
+        <label><input type="radio" name="plano" value="Iniciante: R$ 200,00 a R$ 500,00" required>
+          <strong>Iniciante:</strong> R$ 200,00 a R$ 500,00<br>
+          <span class="descricao">Compra para uso ou revenda com suporte básico via grupo.</span>
+        </label>
       </div>
-
       <div class="opcao">
-        <label><input type="radio" name="nivel" value="Intermediário: R$ 500,00 a R$ 1.500,00"> <strong>Intermediário:</strong> R$ 500,00 a R$ 1.500,00</label>
-        <p>Acompanhamento de um líder com foco em renda extra.</p>
+        <label><input type="radio" name="plano" value="Intermediário: R$ 500,00 a R$ 1.500,00">
+          <strong>Intermediário:</strong> R$ 500,00 a R$ 1.500,00<br>
+          <span class="descricao">Acompanhamento de um líder com foco em renda extra.</span>
+        </label>
       </div>
-
       <div class="opcao">
-        <label><input type="radio" name="nivel" value="Avançado: R$ 1.500,00 a R$ 3.000,00"> <strong>Avançado:</strong> R$ 1.500,00 a R$ 3.000,00</label>
-        <p>Treinamento para liderança e ganhos acima de R$ 3.000,00.</p>
+        <label><input type="radio" name="plano" value="Avançado: R$ 1.500,00 a R$ 3.000,00">
+          <strong>Avançado:</strong> R$ 1.500,00 a R$ 3.000,00<br>
+          <span class="descricao">Treinamento para liderança e ganhos acima de R$ 3.000,00.</span>
+        </label>
       </div>
-
       <div class="opcao">
-        <label><input type="radio" name="nivel" value="Expert: Acima de R$ 3.000,00"> <strong>Expert:</strong> Acima de R$ 3.000,00</label>
-        <p>Contato direto com Flávio e plano para qualificar Diamante.</p>
+        <label><input type="radio" name="plano" value="Expert: Acima de R$ 3.000,00">
+          <strong>Expert:</strong> Acima de R$ 3.000,00<br>
+          <span class="descricao">Contato direto com Flávio e plano para qualificar Diamante.</span>
+        </label>
       </div>
 
       <section id="formulario">
         <h3>Preencha seus dados:</h3>
-
         <input name="nome" placeholder="Nome completo" required>
         <input name="whatsapp" placeholder="WhatsApp (somente números)" required>
         <input name="email" placeholder="E-mail" type="email" required>
         <input name="cidade" placeholder="Cidade/Estado" required>
 
         <fieldset>
-          <legend>Já ganhou quanto com vendas?</legend>
+          <legend>Você já é líder?</legend>
           <textarea name="experiencia" placeholder="Cite empresas e resultados"></textarea>
-          <label><input type="checkbox" name="ganho" value="1-3k"> Entre R$ 1.000,00 e R$ 3.000,00</label>
-          <label><input type="checkbox" name="ganho" value="3-5k"> Entre R$ 3.000,00 e R$ 5.000,00</label>
+          <label><strong>Já ganhei entre:</strong></label>
+          <label><input type="checkbox" name="ganho" value="1-3k"> R$ 1.000,00 a R$ 3.000,00</label>
+          <label><input type="checkbox" name="ganho" value="3-5k"> R$ 3.000,00 a R$ 5.000,00</label>
           <label><input type="checkbox" name="ganho" value="10k+"> Acima de R$ 10.000,00</label>
         </fieldset>
 
-        <button type="submit" class="cta">Quero fazer parte do movimento! 🚀</button>
+        <button type="submit" class="cta">Quero fazer parte do movimento!</button>
       </section>
     </form>
   </section>
