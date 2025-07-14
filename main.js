@@ -1,34 +1,44 @@
-document.getElementById("form").addEventListener("submit", e => {
+// Lógica de seleção de investimento
+let investimentoSelecionado = "";
+
+const radios = document.querySelectorAll('input[name="investimento"]');
+radios.forEach(radio => {
+  radio.addEventListener('change', () => {
+    investimentoSelecionado = radio.value;
+  });
+});
+
+// Lógica do formulário
+const form = document.getElementById("form");
+form.addEventListener("submit", e => {
   e.preventDefault();
 
   const dados = new FormData(e.target);
   const info = Object.fromEntries(dados);
 
-  const opcao = info.opcao || "Não selecionado";
-  const nome = info.nome || "";
-  const whatsapp = info.whatsapp || "";
-  const email = info.email || "";
-  const cidade = info.cidade || "";
-  const experiencia = info.experiencia || "";
-  const ganhos = dados.getAll("ganho").join(", ") || "Não informado";
+  if (!investimentoSelecionado) {
+    alert("Por favor, selecione uma opção de investimento.");
+    return;
+  }
 
-  const mensagem = `👋 Olá! Quero participar do Projeto Diamantes com o Robô Clara 💎
+  const mensagem = `📥 *Novo cadastro recebido!*
 
-📌 *Nome:* ${nome}
-📱 *WhatsApp:* ${whatsapp}
-📧 *E-mail:* ${email}
-📍 *Cidade/Estado:* ${cidade}
+👤 *Nome:* ${info.nome}
+📱 *WhatsApp:* ${info.whatsapp}
+📧 *Email:* ${info.email}
+📍 *Cidade/Estado:* ${info.cidade}
 
-💼 *Opção de investimento:* ${opcao}
+💼 *Nível de Investimento:* ${investimentoSelecionado}
 
-🧠 *Experiência anterior:* ${experiencia}
-💸 *Ganhos anteriores:* ${ganhos}
+📊 *Experiência como líder:*
+${info.experiencia || "(não informado)"}
 
-Aguardo as instruções para começar! 🚀`;
+💸 *Já ganhou quanto com vendas:* ${(info.ganho || []).toString().replace(/,/g, ", ") || "(não informado)"}`;
 
-  const numeroWhatsApp = "SEUNUMEROAQUI"; // Ex: 5513991545873
-  const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
-
+  const numeroDestino = "SEU_NUMERO_COM_DDD"; // exemplo: 5513991545873
+  const url = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensagem)}`;
   window.open(url, "_blank");
+
+  alert("Tudo certo! Vamos abrir o WhatsApp para enviar seus dados. 📲");
   e.target.reset();
 });
